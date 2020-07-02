@@ -1,0 +1,12 @@
+venv
+venv-pypy
+**/*.sqlite3
+**/*.db
+static
+logs
+.env
+.idea
+**/__pycache__
+.scannerwork
+.coverage
+coverage.xml

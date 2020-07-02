@@ -1,0 +1,20 @@
+@startuml code
+
+class Material {
+    List<Material> materiais
+    Estoque estoque
+}
+
+class Ordem {
+    Material material
+}
+
+class Estoque {
+    Material material
+}
+
+Material *-- Material
+Material *-- Ordem
+Material *-- Estoque
+
+@enduml

@@ -1,0 +1,15 @@
+@startuml components
+
+!include c4/C4_Component.puml
+
+Container(api, "Api de materiais", "Spring Boot", "Api com os cruds e regras de materiais")
+
+Container_Boundary(components, "Endpoints") {
+    Component(listar, "ListarMateriais", "Rest Controller", "Lista os materias considerados produtos finais")
+    Component(liberar, "LiberarOrdem", "Rest Controller", "Liberar ordem de produção caso todas materias primas possuam estoque")
+}
+
+Rel(api, listar, "HTTP")
+Rel(api, liberar, "HTTP")
+
+@enduml

@@ -1,0 +1,23 @@
+[packages]
+django-admin = "*"
+django = "*"
+djangorestframework = "*"
+drf-yasg = "*"
+packaging = "*"
+pyjwt = "*"
+gunicorn = "*"
+django-cors-headers = "*"
+django-sorcery = "*"
+django-rest-witchcraft = "*"
+SQLAlchemy = "*"
+python-dotenv = "*"
+requests = "*"
+python-logstash = "*"
+invoke = "*"
+importlib-metadata = "*"
+django-health-check = "*"
+coverage = "*"
+sqlalchemy-pagination = "*"
+
+[requires]
+python_version = "3.8"

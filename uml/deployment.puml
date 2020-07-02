@@ -1,0 +1,20 @@
+@startuml context
+
+!include c4/C4_Container.puml
+
+Person(person, "Comprador", "Usuário que faz análise de estoques")
+
+Container(spa, "Frontend", "Angular 8+", "Interface de acesso do usuário ao relatório de estoques")
+
+Rel(person, spa, "Browser")
+
+
+Container_Boundary(apiBoundary, "API Application") {
+    Container(api, "Api de materiais", "Spring Boot", "Api com os cruds e regras de materiais")
+    ContainerDb(db, "Banco de dados", "Postgres", "Banco de dados da api de materiais")
+    Rel(api, db, "Connection", "Spring JPA")
+}
+
+Rel_R(spa, api, "Rest API")
+
+@enduml

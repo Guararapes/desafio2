@@ -1,0 +1,10 @@
+[run]
+source = ./
+
+[report]
+omit =
+    rchlo_base/*
+    app/*
+    **/tests.py
+    manage.py
+    tasks.py
